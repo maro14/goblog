@@ -1,8 +1,12 @@
 import { Schema, model } from 'mongoose'
 
 const postSchema = new Schema({
-    name: String
-})
+    title: String,
+    category: String,
+    author: String,
+    content: String,
+    
+}, {timestamps: true})
 
 
 export const Post = model('post', postSchema) 
