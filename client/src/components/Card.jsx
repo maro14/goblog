@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-export const Card = ({id, title, author, category}) => {
+export const Card = ({ id, title, author, category }) => {
   return (
     <div className='card'>
         <Link to={`/${id}`}>
