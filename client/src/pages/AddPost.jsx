@@ -11,7 +11,7 @@ export const AddPost = () => {
     const addPost = async(e) => {
         e.preventDefault()
 
-        axios.post("http://localhost:5000/post/add", {
+        axios.post("http://localhost:5000", {
             title,
             category,
             author,

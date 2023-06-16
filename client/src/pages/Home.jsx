@@ -9,23 +9,29 @@ export const Home = () => {
 
     useEffect(() => {
         const fetchPosts = async() => {
-            const { data } = await axios.get("http://localhost:5000/post/")
-            setPosts(data)
+            try {
+                const { data } = await axios.get("http://localhost:5000/")
+                setPosts(data.data)
+            } catch (err) {
+                console.error("Error fetching posts: " ,err);
+            }
         }
         fetchPosts()
-    })
+    }, [])
     return (
-    <div>
-        <Navbar/>
-        {posts.map((post) => {
-            <Card
-                key={post._id}
-                id={post._id}
-                title={post.title}
-                author={post.author}
-                category={post.category}
-            />
-        })}
-    </div>
+        <div className="home-container">
+            <Navbar />
+            <div className="card-container">
+                {posts.map((post) => (
+                    <Card
+                        key={post._id}
+                        id={post._id}
+                        title={post.title}
+                        author={post.author}
+                        category={post.category}
+                    />
+                ))}
+            </div>
+        </div>
     )
 }

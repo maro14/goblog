@@ -4,7 +4,7 @@ import { Home } from './pages/Home'
 import { AddPost } from './pages/AddPost'
 import { SearchPost } from './pages/SearchPost'
 
-const App= () => {
+const App = () => {
 
   return (
     <div className='App'>

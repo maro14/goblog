@@ -1,9 +1,9 @@
 import { Router } from 'express'
-import { addPost, allPosts, testRouter } from '../controllers/post.js'
+import { addPost, getPosts, testRouter } from '../controllers/post.js'
 
 export const postRouter = Router()
 
 postRouter.get('/test', testRouter)
-postRouter.get('/', allPosts)
-postRouter.post('/add', addPost)
+postRouter.get('/', getPosts)
+postRouter.post('/', addPost)
 
