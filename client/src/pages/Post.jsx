@@ -8,12 +8,17 @@ export const Post = () => {
     const [post, setPost] = useState({})
 
     useEffect(() => {
+
         const fetchPost = async() => {
-            const { data } = await axios.get(`http://localhost:5000/${id}`)
-            setPost(data)
+            try {
+                const { data } = await axios.get(`http://localhost:5000/${id}`)
+                setPost(data)
+            } catch (err) {
+                console.error("Error fetching posts:", err);
+            }
         }
         fetchPost()
-    })
+    }, [])
 
     return (
         <div className='post'>

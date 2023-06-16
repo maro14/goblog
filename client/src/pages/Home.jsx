@@ -11,7 +11,7 @@ export const Home = () => {
         const fetchPosts = async() => {
             try {
                 const { data } = await axios.get("http://localhost:5000/")
-                setPosts(data.data)
+                setPosts(data)
             } catch (err) {
                 console.error("Error fetching posts: " ,err);
             }
@@ -19,9 +19,9 @@ export const Home = () => {
         fetchPosts()
     }, [])
     return (
-        <div className="home-container">
+        <div className="home">
             <Navbar />
-            <div className="card-container">
+            <div className="home-card-container">
                 {posts.map((post) => (
                     <Card
                         key={post._id}

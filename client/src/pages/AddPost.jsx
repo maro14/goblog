@@ -23,7 +23,7 @@ export const AddPost = () => {
         setAuthor("")
         setContent("")
     }
-  return (
+    return (
     <div className='add'>
         <Navbar/>
         <form onSubmit={(e) => addPost(e)}>
@@ -55,5 +55,5 @@ export const AddPost = () => {
             <input type='submit' value="Publish"/>
         </form>
     </div>
-  )
+    )
 }
