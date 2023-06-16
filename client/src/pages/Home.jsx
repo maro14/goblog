@@ -9,7 +9,7 @@ export const Home = () => {
 
     useEffect(() => {
         const fetchPosts = async() => {
-            const { data } = await axios.get("http://localhost:2000/")
+            const { data } = await axios.get("http://localhost:5000/post/")
             setPosts(data)
         }
         fetchPosts()

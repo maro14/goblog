@@ -9,7 +9,7 @@ export const Post = () => {
 
     useEffect(() => {
         const fetchPost = async() => {
-            const { data } = await axios.get(`http://localhost:2000/${id}`)
+            const { data } = await axios.get(`http://localhost:5000/post/${id}`)
             setPost(data)
         }
         fetchPost()

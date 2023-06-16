@@ -4,12 +4,12 @@ import { Navbar } from '../components/Navbar'
 import { Card } from "../components/Card";
 
 export const SearchPost = () => {
-    const [query, setQuery] = useState("chd")
+    const [query, setQuery] = useState("")
     const [posts, setPosts] = useState([])
     
     const searchPosts = async(e) => {
         e.preventDefault()
-        const { data } = await axios.get(`http://localhost:2000/search/${query}`)
+        const { data } = await axios.get(`http://localhost:5000/post/search/${query}`)
         setPosts(data)
     }
     return (
@@ -21,7 +21,7 @@ export const SearchPost = () => {
                 type='search'
                 value={query}
             />
-            <input type='submit' value="Reasearch"/>
+            <input type='submit' value="Search"/>
         </form>
         {posts.map((post) => {
             <Card

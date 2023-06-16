@@ -11,7 +11,7 @@ export const AddPost = () => {
     const addPost = async(e) => {
         e.preventDefault()
 
-        axios.post("http://localhost:2000", {
+        axios.post("http://localhost:5000/post/add", {
             title,
             category,
             author,
@@ -52,7 +52,7 @@ export const AddPost = () => {
                 placeholder='Content'
                 value={content}
             ></textarea>
-            <input type='submit' value="Publiser"/>
+            <input type='submit' value="Publish"/>
         </form>
     </div>
   )

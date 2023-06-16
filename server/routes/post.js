@@ -5,5 +5,5 @@ export const postRouter = Router()
 
 postRouter.get('/test', testRouter)
 postRouter.get('/', allPosts)
-postRouter.post('/', addPost)
+postRouter.post('/add', addPost)
 

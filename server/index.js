@@ -11,6 +11,15 @@ app.use(express.json())
 app.use(morgan("dev"))
 app.use(cors())
 
+const corsOptions = {
+    origin: "*",
+    credentials: true,
+    allowedHeaders: ["sessionId", "Content-Type"],
+    exposedHeaders: ["sessionId"],
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false,
+}
+
 import { postRouter } from "./routes/post.js"
 app.use('/post', postRouter)
 
