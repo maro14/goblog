@@ -14,8 +14,9 @@ export const getPost = async(req, res) => {
 
     const ObjecID = Types.ObjectId
     const { id } = req.params
+
     if (!ObjecID.isValid(id)) {
-        return res.status(400).json("ID unknown : ",id)
+        return res.status(400).json("ID unknown : ", id)
     }
 
     try {
@@ -48,6 +49,19 @@ export const addPost = async(req, res) => {
         res.status(201).json({ data: post })
     } catch (err) {
         res.status(400).json({ data: err.message })
+    }
+}
+
+export const searchOnePost = async(req, res) => {
+    try {
+        const { query } = req.params
+        const onePost = await Post.find({
+            $regex: query, $options: "i"
+        })
+
+        res.status(200).json(onePost)
+    } catch (err) {
+        res.status(400).json(err)
     }
 }
 

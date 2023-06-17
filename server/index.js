@@ -7,22 +7,13 @@ dbConnect()
 
 const app = express()
 
-//const corsOptions = {
-//    origin: "http://localhost:3000",
-//    credentials: true,
-//    allowedHeaders: ["sessionId", "Content-Type"],
-//    exposedHeaders: ["sessionId"],
-//    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-//    preflightContinue: false,
-//}
-
 app.use(express.json())
 app.use(morgan("dev"))
-// Enable CORS with specific options
+
 app.use(cors({
     origin: 'http://localhost:3000',
     allowedHeaders: ['Content-Type', 'Authorization'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE']
+    methods: ['GET', 'POST', 'PUT', 'DELETE', "HEAD", "PATCH"]
 }));
 
 
