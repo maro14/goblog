@@ -10,7 +10,7 @@ export const SearchPost = () => {
     const searchPosts = async(e) => {
         e.preventDefault()
         const { data } = await axios.get(`http://localhost:5000/search/${query}`)
-        setPosts(data.data)
+        setPosts(data)
     }
     return (
     <div className="search">

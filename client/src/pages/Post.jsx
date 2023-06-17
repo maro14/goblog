@@ -4,7 +4,7 @@ import { useParams} from 'react-router-dom'
 import { Navbar } from '../components/Navbar'
 
 export const Post = () => {
-    const { id } = useParams()
+    let { id } = useParams()
     const [post, setPost] = useState({})
 
     useEffect(() => {
@@ -14,7 +14,7 @@ export const Post = () => {
                 const { data } = await axios.get(`http://localhost:5000/${id}`)
                 setPost(data)
             } catch (err) {
-                console.error("Error fetching posts:", err);
+                console.error("Error fetching posts:", err.message);
             }
         }
         fetchPost()
@@ -25,7 +25,7 @@ export const Post = () => {
             <Navbar/>
             <h1>{post.title}</h1>
             <h2>
-                Post {post.author} - {post.category}
+                Posting by {post.author} - {post.category}
             </h2>
             <p>{post.content}</p>
         </div>

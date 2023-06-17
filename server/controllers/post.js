@@ -1,5 +1,5 @@
 import { Post } from '../models/post.js'
-import { Types} from 'mongoose'
+import { Types } from 'mongoose'
 
 
 export const getPosts = async(req, res) => {
