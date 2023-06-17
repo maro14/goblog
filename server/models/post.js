@@ -18,5 +18,6 @@ const postSchema = new Schema({
     
 }, { timestamps: true })
 
+postSchema.index({ title: 'text', content: 'text' });
 
 export const Post = model('post', postSchema) 

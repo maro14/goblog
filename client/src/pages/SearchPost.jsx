@@ -24,7 +24,7 @@ export const SearchPost = () => {
             <input type='submit' value="Search"/>
         </form>
         {posts.map((post) => {
-            <Card
+            return <Card
                 key={post._id}
                 id={post._id}
                 title={post.title}

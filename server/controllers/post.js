@@ -55,16 +55,13 @@ export const addPost = async(req, res) => {
 export const searchOnePost = async(req, res) => {
     try {
         const { query } = req.params
-        const onePost = await Post.find({
-            $regex: query, $options: "i"
-        })
-
-        res.status(200).json(onePost)
+        const posts = await Post.find(
+            { $text: { $search: query } },
+            { score: { $meta: 'textScore' } }
+        ).sort({ score: { $meta: 'textScore' } })
+    
+        res.status(200).json(posts)
     } catch (err) {
         res.status(400).json(err)
     }
-}
-
-export const testRouter = async(req, res) => {
-    res.status(200).send("OK fron post")
 }

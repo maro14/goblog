@@ -3,7 +3,6 @@ import { addPost, getPosts, getPost, searchOnePost, testRouter } from '../contro
 
 export const postRouter = Router()
 
-postRouter.get('/test', testRouter)
 postRouter.get('/', getPosts)
 postRouter.get('/:id', getPost)
 postRouter.get('/search/:query', searchOnePost)
