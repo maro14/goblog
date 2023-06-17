@@ -1,10 +1,8 @@
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, sans-serif;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
 }
@@ -38,17 +36,16 @@ h1 {
 
 .navbar {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   margin: 10px;
 }
 
 .add>form {
-  display: flex;
+  display: grid;
   flex-direction: column;
   row-gap: 10px;
-  width: 50%;
+  width: 40%;
   margin: 20px auto;
 }
 
@@ -60,4 +57,52 @@ input {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+}
+
+
+.add input[type="publish"] {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+
+.add input[type="submit"] {
+  padding: 5px 10px;
+  background-color: #646cff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+
+.add input[type="submit"]:hover {
+  background-color: #535bf2;
+}
+
+.search {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.search form {
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.search input[type="search"] {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.search input[type="submit"] {
+  padding: 5px 10px;
+  background-color: #646cff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.search input[type="submit"]:hover {
+  background-color: #535bf2;
 }

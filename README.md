@@ -1,7 +1,10 @@
-## Overview
+
+# Overview
+
 This project is a blog application that allows users to create, view, and search for posts. It provides an API to interact with the blog functionality.
 
 ## Installation
+
 To install and set up the project, follow these steps:
 
 1. Clone the project repository.
@@ -88,24 +91,7 @@ To deploy the project to a production environment, follow these steps:
 3. Build the project using in client `pnpm run build` and  `pnpm run dev`.
 4. Start the server using `pnpm dev`.
 
-## Contributing
-
-Contributions to the project are welcome! To contribute, follow these guidelines:
-
-- Fork the repository and clone it locally.
-- Create a new branch for your changes.
-- Make your modifications and commit them.
-- Push your branch to your forked repository.
-- Open a pull request with a detailed description of your changes.
 
 ## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
-
-## Credits
-
-- Teheskhiel Fritz: Project Developer
-
----
-
-Feel free to customize and expand upon this template based on your project's specific needs. Good luck with your documentation!
