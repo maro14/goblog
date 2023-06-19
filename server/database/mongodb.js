@@ -2,7 +2,7 @@ import { connect } from 'mongoose'
 
 
 export const dbConnect = (req, res) => {
-    const MONGOURI = "mongodb://localhost:27017/goblog"
+    const MONGOURI = process.env.MONGODB
 
     try {
         connect(MONGOURI, {
