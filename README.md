@@ -78,7 +78,7 @@ The project uses the following dependencies:
 To set up the project for development, follow these steps:
 
 1. Clone the project repository.
-2. Install the development dependencies by running the server `cd server pnpm install` for client `cd client pnpm install`.
+2. Install the development dependencies by running the server `cd server pnpm install` for client `cd client pnpm install` on `http://localhost:3000/`.
 3. Start the development server using `pnpm run dev`.
 4. Make changes to the code and test your modifications.
 
