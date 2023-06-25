@@ -8,5 +8,4 @@
         }
         },
         "exclude": ["node_modules"]
-  }
-  
+}
