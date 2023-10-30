@@ -1,6 +1,8 @@
 # Base image
 FROM node:14
 
+FROM node:latest
+
 WORKDIR /app
 
 # Install pnpm globally
