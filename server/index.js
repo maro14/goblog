@@ -13,7 +13,7 @@ app.use(express.json())
 app.use(morgan("dev"))
 
 app.use(cors({
-    origin: `${process.env.ORIGIN}`,
+    origin: `http://127.0.0.1:3000`,
     allowedHeaders: ['Content-Type', 'Authorization'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', "HEAD", "PATCH"]
 }));
