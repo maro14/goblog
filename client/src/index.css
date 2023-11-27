@@ -26,7 +26,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 25px;
 }
 
 h1 {
@@ -36,10 +35,27 @@ h1 {
 
 .navbar {
   display: flex;
-  justify-content: space-around;
-  margin: 10px;
-  padding: 10px;
-  color: whitesmoke;
+  justify-content: space-between;
+  background-color: #333;
+  padding: 2em;
+}
+
+.navbar-logo h1 {
+  color: #fff;
+}
+
+.navbar-link {
+  display: flex;
+  gap: 10px;
+}
+
+.navbar-link a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-link a:hover {
+  color: #ddd;
 }
 
 .add>form {
