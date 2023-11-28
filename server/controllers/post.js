@@ -59,9 +59,19 @@ export const searchOnePost = async(req, res) => {
             { $text: { $search: query } },
             { score: { $meta: 'textScore' } }
         ).sort({ score: { $meta: 'textScore' } })
-    
+
         res.status(200).json(posts)
     } catch (err) {
         res.status(400).json(err)
     }
+}
+
+export const delPost = async(req, res) => {
+  try {
+    const { id } = req.params
+    const del = await Post.findByIdAndDelete({ id })
+    res.status(200).json(del)
+  } catch (err) {
+    res.status(400).json(err)
+  }
 }
