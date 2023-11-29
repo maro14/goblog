@@ -55,6 +55,11 @@ export const addPost = async(req, res) => {
 export const searchOnePost = async(req, res) => {
     try {
         const { query } = req.params
+
+        if (query || query.trim() === '') {
+          return res.status(400).json({ err: 'Invalid search query' })
+        }
+
         const posts = await Post.find(
             { $text: { $search: query } },
             { score: { $meta: 'textScore' } }
