@@ -7,4 +7,3 @@ postRouter.get('/', getPosts)
 postRouter.get('/:id', getPost)
 postRouter.get('/search/:query', searchOnePost)
 postRouter.post('/', addPost)
-

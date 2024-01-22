@@ -54,11 +54,7 @@ export const addPost = async(req, res) => {
 
 export const searchOnePost = async(req, res) => {
     try {
-        const { query } = req.params
-
-        if (query || query.trim() === '') {
-          return res.status(400).json({ err: 'Invalid search query' })
-        }
+        const { query } = req.param
 
         const posts = await Post.find(
             { $text: { $search: query } },
@@ -72,11 +68,11 @@ export const searchOnePost = async(req, res) => {
 }
 
 export const delPost = async(req, res) => {
-  try {
-    const { id } = req.params
-    const del = await Post.findByIdAndDelete({ id })
-    res.status(200).json(del)
-  } catch (err) {
-    res.status(400).json(err)
-  }
+    try {
+        const { id } = req.params
+        const del = await Post.findByIdAndDelete({ id })
+        res.status(200).json(del)
+    } catch (err) {
+        res.status(400).json(err)
+    }
 }

@@ -26,34 +26,36 @@ export const AddPost = () => {
     return (
     <div className='add'>
         <Navbar/>
-        <form onSubmit={(e) => addPost(e)}>
-            <input
-                onChange={(e) => setTitle(e.target.value)}
-                type='text'
-                placeholder='Title'
-                value={title}
-            />
-            <input
-                onChange={(e) => setCategory(e.target.value)}
-                type='text'
-                placeholder='Category'
-                value={category}
-            />
-            <input
-                onChange={(e) => setAuthor(e.target.value)}
-                type='text'
-                placeholder='Author'
-                value={author}
-            />
-            <textarea
-                onChange={(e) => setContent(e.target.value)}
-                cols="30"
-                rows="10"
-                placeholder='Content'
-                value={content}
-            ></textarea>
-            <input type='submit' value="Publish"/>
-        </form>
+        <div className='post'>
+          <form onSubmit={(e) => addPost(e)}>
+              <input
+                  onChange={(e) => setTitle(e.target.value)}
+                  type='text'
+                  placeholder='Title'
+                  value={title}
+              />
+              <input
+                  onChange={(e) => setCategory(e.target.value)}
+                  type='text'
+                  placeholder='Category'
+                  value={category}
+              />
+              <input
+                  onChange={(e) => setAuthor(e.target.value)}
+                  type='text'
+                  placeholder='Author'
+                  value={author}
+              />
+              <textarea
+                  onChange={(e) => setContent(e.target.value)}
+                  cols="30"
+                  rows="10"
+                  placeholder='Content'
+                  value={content}
+              ></textarea>
+              <input type='submit' value="Publish"/>
+          </form>
+        </div>
     </div>
     )
 }
