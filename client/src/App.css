@@ -39,7 +39,17 @@
 .card {
   padding: 10px;
   box-shadow: 0 4px 8px var(--box-shadow-color);
-  transition: box-shadow 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:focus {
+  padding: 10px;
+  box-shadow: 0 4px 8px var(--box-shadow-color);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+:root {
+  --box-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 .card:hover {

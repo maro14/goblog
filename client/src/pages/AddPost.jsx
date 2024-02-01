@@ -38,7 +38,13 @@ export const AddPost = () => {
                   onChange={(e) => setCategory(e.target.value)}
                   type='text'
                   placeholder='Category'
-                  value={category}
+                  value={category}/**
+ * Function: AddPost
+ *
+ * Description: This function is responsible for rendering a form to add a new post. It uses the useState hook to manage the state of the form inputs. When the form is submitted, it makes a POST request to the specified endpoint with the form data. After the request is made, it resets the form inputs to their initial values.
+ *
+ * @returns {JSX.Element} The JSX element representing the form to add a new post.
+ */
               />
               <input
                   onChange={(e) => setAuthor(e.target.value)}

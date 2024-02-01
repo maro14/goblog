@@ -38,8 +38,8 @@ h1 {
 .navbar {
   display: flex;
   justify-content: space-between;
-  background-color: #333;
-  padding: 1em;
+  background-color: var(--navbar-background-color);
+  padding: var(--navbar-padding);
 }
 
 
@@ -59,22 +59,75 @@ h1 {
 
 
 
-.add .post>form {
-  display: grid;
+.add {
+  display: flex;
   flex-direction: column;
-  row-gap: 20px;
-  width: 50%;
-  margin: 100px auto;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.post {
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+textarea {
+  margin-bottom: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="text"] {
+  width: 100%;
 }
 
 textarea {
-  border-radius: 5px;
+  width: 100%;
 }
 
-input {
-  padding: 5px;
-  border-radius: 5px;
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
 }
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.posted-post {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.posted-post h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.posted-post p {
+  margin-bottom: 8px;
+}
+
 
 .home-card-container {
   display: grid;
@@ -89,19 +142,6 @@ input {
   margin-right: 10px;
 }
 
-
-.add input[type="submit"] {
-  padding: 5px 10px;
-  background-color: #646cff;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-
-.add input[type="submit"]:hover {
-  background-color: #535bf2;
-}
 
 .search {
   flex-direction: column;
@@ -130,16 +170,4 @@ input {
 
 .search input[type="submit"]:hover {
   background-color: #535bf2;
-}
-
-.card {
-  padding: 10px;
-  box-shadow: 0 4px 8px rgba(75, 72, 72, 0.1);
-  transition: box-shadow 0.3s ease-in-out;
-  border-radius: 10px;
-}
-
-.card:hover {
-  box-shadow: 0 8px 16px rgba(72, 136, 200, 0.2);
-  border-radius: 10px;
 }

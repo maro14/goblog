@@ -3,6 +3,12 @@ import axios from 'axios'
 import { Navbar } from '../components/Navbar'
 import { Card } from '../components/Card'
 
+/**
+ * The Home function is a React component that represents the home page of the application.
+ * It fetches posts from the server and renders them as cards.
+ *
+ * @returns {JSX.Element} The rendered home page component.
+ */
 export const Home = () => {
 
     const [posts, setPosts] = useState([])
