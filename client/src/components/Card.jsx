@@ -17,17 +17,3 @@ export const Card = ({ id, title, author, category }) => {
     </div>
   )
 }
-
-// Code Improvement Suggestions:
-// Suggestion 1: Use relative units for box-shadow size
-// Example after code improvement:
-// .card:hover {
-//   box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
-// }
-
-// Suggestion 2: Add :focus pseudo-class for better accessibility
-// Example after code improvement:
-// .card:hover,
-// .card:focus {
-//   box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
-// }
