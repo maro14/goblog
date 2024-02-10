@@ -25,8 +25,9 @@ export const Home = () => {
         fetchPosts()
     }, [])
     return (
+    <>
+    <Navbar />
         <div className="home">
-            <Navbar />
             <div className="home-card-container">
                 {posts.map((post) => (
                     <Card
@@ -39,5 +40,6 @@ export const Home = () => {
                 ))}
             </div>
         </div>
+      </>
     )
 }

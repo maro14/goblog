@@ -21,13 +21,16 @@ export const Post = () => {
     }, [])
 
     return (
+    <>
+      <Navbar/>
         <div className='post'>
-            <Navbar/>
+
             <h1>{post.title}</h1>
             <h2>
                 Posting by {post.author} - {post.category}
             </h2>
             <p>{post.content}</p>
         </div>
+    </>
     )
 }

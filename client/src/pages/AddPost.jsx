@@ -24,8 +24,9 @@ export const AddPost = () => {
         setContent("")
     }
     return (
+    <>
+    <Navbar/>
     <div className='add'>
-        <Navbar/>
         <div className='post'>
           <form onSubmit={(e) => addPost(e)}>
               <input
@@ -63,5 +64,6 @@ export const AddPost = () => {
           </form>
         </div>
     </div>
+    </>
     )
 }
