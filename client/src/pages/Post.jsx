@@ -18,7 +18,7 @@ export const Post = () => {
             }
         }
         fetchPost()
-    }, [])
+    }, [id])
 
     return (
     <>
