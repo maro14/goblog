@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { Navbar } from '../components/Navbar';
-import { Card } from "../components/Card";
+import { Card } from '../components/Card';
 
 export const SearchPost = () => {
     const [query, setQuery] = useState('');
@@ -17,6 +17,7 @@ export const SearchPost = () => {
             setPosts(data);
         } catch (error) {
             console.error(error);
+            alert('Error fetching posts. Please try again later.');
         } finally {
             setLoading(false);
         }
@@ -31,8 +32,10 @@ export const SearchPost = () => {
                         type="search"
                         value={query}
                         onChange={(e) => setQuery(e.target.value)}
+                        placeholder="Search for posts"
+                        disabled={loading}
                     />
-                    <input type="submit" value="Search" />
+                    <input type="submit" value="Search" disabled={loading} />
                 </form>
                 {loading ? (
                     <p>Loading...</p>

@@ -32,7 +32,7 @@ export const Home = () => {
                 {posts.map((post) => (
                     <Card
                         key={post._id}
-                        id={post._id}
+                        _id={post._id}
                         title={post.title}
                         author={post.author}
                         category={post.category}
