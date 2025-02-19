@@ -8,7 +8,7 @@
     line-height: 1.5;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.87);
-    background-color: #d3efff;
+    background-color: #f9fdff;
 }
 
 body {
@@ -134,9 +134,9 @@ body {
 }
 
 .search input[type="search"] {
-    padding: 10px;
+    padding: 20px 60px;
     margin-right: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
     box-sizing: border-box;
     transition: all 0.3s ease;
     outline: none;
@@ -150,7 +150,7 @@ body {
     cursor: pointer;
     border-radius: 10px;
     transition: background-color 0.3s ease;
-    /* Added transition property */
+    padding: 10px 40px;
 }
 
 .search input[type="submit"]:hover {
